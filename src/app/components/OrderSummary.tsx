@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const NavBar = () => {
+export const OrderSummary = () => {
 	return (
 		<nav className="w-full flex justify-center align-middle ">
 			<div className="max-w-screen-xl mx-auto w-full h-[72px] flex justify-between align-middle border border-red-500 ">

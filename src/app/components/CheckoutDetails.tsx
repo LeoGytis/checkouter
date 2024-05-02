@@ -57,7 +57,7 @@ export const CheckoutDetails = () => {
 						<input placeholder="Name on card" className="checkout-input"></input>
 					</div>
 
-					<button className="w-full text-white font-bold bg-[#009900] rounded-md px-8 py-4 checkout-button">
+					<button className="w-full text-white font-bold bg-[#090] rounded-md px-8 py-4 checkout-button">
 						COMPLETE ORDER
 					</button>
 				</div>

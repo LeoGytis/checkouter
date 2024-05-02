@@ -9,12 +9,12 @@
 }
 
 input[type="radio"] {
-	border: 3px;
 	accent-color: #3362ab;
 }
 
 .checkout-button {
 	font-family: "Poppins", sans-serif !important;
+	box-shadow: 0px 4px 10px 0px rgba(67, 40, 16, 0.24);
 }
 
 .checkout-input::placeholder {

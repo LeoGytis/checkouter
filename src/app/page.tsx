@@ -8,7 +8,9 @@ export default function Home() {
 			<NavBar />
 			<div className="flex max-w-screen-xl mx-auto w-full">
 				<CheckoutDetails />
-				<OrderSummary />
+				<section className="w-1/2 bg-[#F5F5F5] px-[40px] py-[38px]">
+					<OrderSummary />
+				</section>
 			</div>
 		</main>
 	);

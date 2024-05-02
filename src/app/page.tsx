@@ -6,8 +6,10 @@ export default function Home() {
 	return (
 		<main>
 			<NavBar />
-			<CheckoutDetails />
-			<OrderSummary />
+			<div className="flex max-w-screen-xl mx-auto w-full">
+				<CheckoutDetails />
+				<OrderSummary />
+			</div>
 		</main>
 	);
 }

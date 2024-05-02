@@ -3,25 +3,34 @@ import Image from "next/image";
 
 export const OrderSummary = () => {
 	return (
-		<div className="flex flex-col">
-			<div className="flex justify-between items-center p-4 ">
+		<div className=" flex flex-col gap-4 text-gray_dark">
+			<div className="flex justify-between items-center">
 				<div className="flex items-center">
-					<Image src="/images/product.png" alt="Product" width={100} height={50} />
-					<h3 className="px-4">LogoImpsum PIL</h3>
+					<Image src="/images/product.png" alt="Product" width={50} height={30} />
+					<h3 className="text-sm font-bold px-4">LogoImpsum PIL</h3>
 				</div>
-				<div className="flex-end">$299.97</div>
+				<div className="text-sm font-medium">$299.97</div>
 			</div>
-			<div className="flex justify-between items-center p-4 ">
+			<div className="gray-line-separator"></div>
+			<div className="flex justify-between items-center text-sm">
 				<div>Subtotal</div>
 				<div>$299.97</div>
 			</div>
-			<div className="flex justify-between items-center p-4 ">
+			<div className="gray-line-separator"></div>
+			<div className="flex justify-between items-center text-lg font-bold">
 				<div>Total</div>
 				<div>$299.97</div>
 			</div>
-			<article className="w-full flex flex-col border-4 border-green-700">
-				<div className="flex justify-center p-4">Why Choose LogoIpsum</div>
-				<div className="flex border-2 border-red-800 p-4">
+
+			<article className="w-full flex flex-col pt-6">
+				<div className="flex justify-center">
+					<div className="w-full flex justify-center relative ">
+						<div className="absolute top-1/2 gray-line-separator"></div>
+						<div className="bg-background px-4 z-10">Why Choose LogoIpsum</div>
+					</div>
+				</div>
+
+				<div className="flex border-2 border-red-800 p-4 mt-10">
 					<div className="flex items-center p-2">Icon</div>
 					<div className="flex flex-col p-2">
 						<h4 className="font-bold">90-Day Money Back Guarantee</h4>

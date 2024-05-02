@@ -6,7 +6,12 @@ export const OrderSummary = () => {
 		<div className=" flex flex-col gap-4 text-gray_dark">
 			<div className="flex justify-between items-center">
 				<div className="flex items-center">
-					<Image src="/images/product.png" alt="Product" width={50} height={30} />
+					<div className="relative flex items-center">
+						<div className="absolute top-0 left-full transform -translate-y-1/2 -translate-x-1/2 font-sm text-white rounded-full bg-gray_medium px-[7px]">
+							3
+						</div>
+						<Image src="/images/product.png" alt="Product" width={64} height={64} />
+					</div>
 					<h3 className="text-sm font-bold px-4">LogoImpsum PIL</h3>
 				</div>
 				<div className="text-sm font-medium">$299.97</div>

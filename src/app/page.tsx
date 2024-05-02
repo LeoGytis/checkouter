@@ -10,7 +10,7 @@ export default function Home() {
 				<section className="w-1/2 px-[40px] py-[38px]">
 					<CheckoutDetails />
 				</section>
-				<section className="w-1/2 bg-background px-[40px] py-[38px]">
+				<section className="w-1/2 bg-gray_background px-[40px] py-[38px]">
 					<OrderSummary />
 				</section>
 			</div>

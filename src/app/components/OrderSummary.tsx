@@ -31,7 +31,7 @@ export const OrderSummary = () => {
 				<div className="flex justify-center">
 					<div className="w-full flex justify-center relative ">
 						<div className="absolute top-1/2 gray-line-separator"></div>
-						<div className="bg-background px-4 z-10">Why Choose LogoIpsum</div>
+						<div className="bg-gray_background  px-4 z-10">Why Choose LogoIpsum</div>
 					</div>
 				</div>
 

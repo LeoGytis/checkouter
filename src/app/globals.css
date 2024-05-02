@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 .checkout-input {
-	@apply border border-gray-500 rounded;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	padding: 16px;
+}
+
+.checkout-input::placeholder {
+	color: #828282;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
 }
 
 .gray-line-separator {

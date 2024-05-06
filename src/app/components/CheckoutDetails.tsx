@@ -1,12 +1,63 @@
+"use client";
+import React from "react";
+import {Field, Form, useFormik, FormikProvider} from "formik";
+import * as Yup from "yup";
 import Image from "next/image";
 
+export const validationSchema = Yup.object().shape({
+	email: Yup.string().email("Invalid email address").required("Email is required"),
+	firstName: Yup.string().required("First name is required"),
+	lastName: Yup.string().required("Last name is required"),
+	address: Yup.string().required("Address is required"),
+	city: Yup.string().required("City is required"),
+	state: Yup.string().required("State/Province is required"),
+	zip: Yup.string().required("ZIP/Postal code is required"),
+	country: Yup.string().required("Country is required"),
+	cardNumber: Yup.string().required("Card number is required"),
+	expiration: Yup.string().required("Expiration date is required"),
+	securityCode: Yup.string().required("Security code is required"),
+	nameOnCard: Yup.string().required("Name on card is required"),
+});
+
 export const CheckoutDetails = () => {
+	const formik = useFormik({
+		initialValues: {
+			email: "",
+			firstName: "",
+			lastName: "",
+			address: "",
+			city: "",
+			state: "",
+			zip: "",
+			country: "",
+			cardNumber: "",
+			expiration: "",
+			securityCode: "",
+			nameOnCard: "",
+		},
+		validationSchema: validationSchema,
+		onSubmit: (values) => {
+			// Handle form submission
+			console.log(values);
+		},
+	});
+
 	return (
 		<form className="flex flex-col gap-8">
-			{/* <ContactContainer /> */}
 			<div className="flex flex-col gap-4">
 				<h1 className="text-2xl font-bold">Contact</h1>
-				<input placeholder="Email Address" className="checkout-input" />
+				<input
+					type="email"
+					placeholder="Email Address"
+					className="checkout-input"
+					name="email"
+					value={formik.values.email}
+					onChange={formik.handleChange}
+					onBlur={formik.handleBlur}
+				/>
+				{formik.touched.email && formik.errors.email ? (
+					<div className="text-red-500">{formik.errors.email}</div>
+				) : null}
 			</div>
 			<div className="flex flex-col gap-4">
 				<h1 className="text-2xl font-bold">Delivery</h1>
@@ -37,8 +88,8 @@ export const CheckoutDetails = () => {
 							<div className="w-8 h-6 flex justify-center items-center rounded bg-white  border-[0.5px] border-gray_border p-[2px]">
 								<Image src="/images/visa.svg" alt="Credit-Visa" width={36} height={24} />
 							</div>
-							<Image src="/images/mastercard.png" alt="Credit-Visa" width={36} height={24} />
-							<Image src="/images/amex.svg" alt="Credit-Visa" width={36} height={24} />
+							<Image src="/images/mastercard.png" alt="Credit-Visa" width={36} height={24} priority />
+							<Image src="/images/amex.svg" alt="Credit-Visa" width={36} height={24} priority />
 							<div className="w-8 h-6 flex justify-center items-center rounded bg-white  border-[0.5px] border-gray_border p-[4px]">
 								<Image src="/images/group.svg" alt="Credit-Visa" width={36} height={24} />
 							</div>

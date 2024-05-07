@@ -8,6 +8,13 @@
 	padding: 16px;
 }
 
+.checkout-input::placeholder {
+	color: #828282;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
 input[type="radio"] {
 	accent-color: #3362ab;
 }
@@ -15,13 +22,6 @@ input[type="radio"] {
 .checkout-button {
 	font-family: "Poppins", sans-serif !important;
 	box-shadow: 0px 4px 10px 0px rgba(67, 40, 16, 0.24);
-}
-
-.checkout-input::placeholder {
-	color: #828282;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 20px;
 }
 
 .gray-line-separator {

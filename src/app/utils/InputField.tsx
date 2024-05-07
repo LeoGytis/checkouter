@@ -1,4 +1,4 @@
-import {ErrorMessage, Field, FieldProps} from "formik";
+import {ErrorMessage, Field} from "formik";
 
 interface InputFieldProps {
 	type: string;
@@ -10,7 +10,7 @@ interface InputFieldProps {
 }
 
 export const InputField = ({type, placeholder, name, value, onChange, onBlur}: InputFieldProps) => (
-	<div className="flex flex-col gap-4">
+	<div className="w-full flex flex-col gap-1">
 		<Field
 			type={type}
 			placeholder={placeholder}

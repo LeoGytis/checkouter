@@ -1,24 +1,9 @@
 "use client";
 import React from "react";
-import {Field, Form, useFormik, FormikProvider} from "formik";
-import * as Yup from "yup";
+import {Form, useFormik, FormikProvider} from "formik";
 import Image from "next/image";
 import {InputField} from "../utils/InputField";
-
-export const validationSchema = Yup.object().shape({
-	email: Yup.string().email("Invalid email address").required("Email is required"),
-	firstName: Yup.string().required("First name is required"),
-	lastName: Yup.string().required("Last name is required"),
-	address: Yup.string().required("Address is required"),
-	city: Yup.string().required("City is required"),
-	state: Yup.string().required("State/Province is required"),
-	zip: Yup.string().required("ZIP/Postal code is required"),
-	country: Yup.string().required("Country is required"),
-	cardNumber: Yup.string().required("Card number is required"),
-	expiration: Yup.string().required("Expiration date is required"),
-	securityCode: Yup.string().required("Security code is required"),
-	nameOnCard: Yup.string().required("Name on card is required"),
-});
+import {validationSchema} from "../utils/validationSchema";
 
 export const CheckoutDetails = () => {
 	const formik = useFormik({
@@ -29,10 +14,10 @@ export const CheckoutDetails = () => {
 			address: "",
 			city: "",
 			state: "",
-			zip: "",
+			zipCode: "",
 			country: "",
 			cardNumber: "",
-			expiration: "",
+			expirationDate: "",
 			securityCode: "",
 			nameOnCard: "",
 		},
@@ -60,16 +45,73 @@ export const CheckoutDetails = () => {
 				<div className="flex flex-col gap-4">
 					<h1 className="text-2xl font-bold">Delivery</h1>
 					<div className="flex gap-4">
-						<input placeholder="First Name" className="w-1/2 checkout-input" />
-						<input placeholder="Last Name" className="w-1/2 checkout-input" />
+						<InputField
+							type="text"
+							placeholder="First Name"
+							name="firstName"
+							value={formik.values.firstName}
+							onChange={formik.handleChange}
+							onBlur={formik.handleBlur}
+						/>
+						<InputField
+							type="text"
+							placeholder="Last Name"
+							name="lastName"
+							value={formik.values.lastName}
+							onChange={formik.handleChange}
+							onBlur={formik.handleBlur}
+						/>
 					</div>
-					<input placeholder="Address" className="checkout-input" />
+					<InputField
+						type="text"
+						placeholder="Address"
+						name="address"
+						value={formik.values.address}
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
+					/>
 					<div className="flex gap-3">
-						<input placeholder="City" className="w-1/3 checkout-input" />
-						<input placeholder="State / Province" className="w-1/3 checkout-input" />
-						<input placeholder="ZIP / Postal Code" className="w-1/3 checkout-input" />
+						<div className="w-1/3">
+							<InputField
+								type="text"
+								placeholder="City"
+								name="city"
+								value={formik.values.city}
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+							/>
+						</div>
+						<div className="w-1/3">
+							<InputField
+								type="text"
+								placeholder="State / Province"
+								name="state"
+								value={formik.values.state}
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+							/>
+						</div>
+						<div className="w-1/3">
+							<InputField
+								type="text"
+								placeholder="ZIP / Postal Code"
+								name="zipCode"
+								value={formik.values.zipCode}
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+							/>
+						</div>
 					</div>
-					<input placeholder="Country" className="checkout-input mt-[-4px]" />
+					<div className=" mt-[-4px]">
+						<InputField
+							type="text"
+							placeholder="Country"
+							name="country"
+							value={formik.values.country}
+							onChange={formik.handleChange}
+							onBlur={formik.handleBlur}
+						/>
+					</div>
 				</div>
 				<div className="flex flex-col gap-4">
 					<div>
@@ -97,14 +139,41 @@ export const CheckoutDetails = () => {
 							</div>
 						</div>
 						<div className="flex flex-col gap-3 bg-gray_background border border-gray_border border-t-0 rounded-b p-3 mb-4">
-							<input placeholder="Card number" className="checkout-input"></input>
+							<InputField
+								type="text"
+								placeholder="Card number"
+								name="cardNumber"
+								value={formik.values.cardNumber}
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+							/>
 							<div className="flex gap-4">
-								<input placeholder="Expiration (MM/YY)" className="w-1/2 checkout-input" />
-								<input placeholder="Security code" className="w-1/2 checkout-input" />
+								<InputField
+									type="text"
+									placeholder="Expiration (MM/YY)"
+									name="expirationDate"
+									value={formik.values.expirationDate}
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
+								<InputField
+									type="text"
+									placeholder="Security code"
+									name="securityCode"
+									value={formik.values.securityCode}
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
 							</div>
-							<input placeholder="Name on card" className="checkout-input"></input>
+							<InputField
+								type="text"
+								placeholder="Name on card"
+								name="nameOnCard"
+								value={formik.values.nameOnCard}
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+							/>
 						</div>
-
 						<button className="w-full text-white font-bold bg-[#090] rounded-md px-8 py-4 checkout-button">
 							COMPLETE ORDER
 						</button>

@@ -4,8 +4,8 @@ import {Form, useFormik, FormikProvider} from "formik";
 import Image from "next/image";
 import {InputField} from "../utils/InputField";
 import {validationSchema} from "../utils/validationSchema";
-import {CountryDropdown, RegionDropdown} from "react-country-region-selector";
 import CountrySelector from "../utils/CountrySelector";
+import RegionSelector from "../utils/RegionSelector";
 
 export const CheckoutDetails = () => {
 	const formik = useFormik({
@@ -23,41 +23,23 @@ export const CheckoutDetails = () => {
 			securityCode: "",
 			nameOnCard: "",
 		},
-		// validationSchema: validationSchema,
-		// onSubmit: (values) => {
-		// 	console.log("Reikšmės::", values);
-		// },
-		onSubmit: () => {
-			console.log("Reikšmės::");
+		validationSchema: validationSchema,
+		onSubmit: (values) => {
+			console.log("formValues --->", values);
+			storeToLocalStorage(values);
 		},
 	});
 
+	const storeToLocalStorage = (values: any) => {
+		const serializedValues = JSON.stringify(values);
+		localStorage.setItem("formValues", serializedValues);
+	};
+
 	return (
 		<FormikProvider value={formik}>
-			<Form
-				onSubmit={(e) => {
-					e.preventDefault();
-					console.log("Formik handleSubmit called.");
-					formik.handleSubmit(e);
-				}}
-				className="flex flex-col gap-8"
-			>
+			<Form className="flex flex-col gap-8">
 				<div className="flex flex-col gap-4">
 					<h1 className="text-2xl font-bold">Contact</h1>
-					<CountryDropdown
-						name="country"
-						value={formik.values.country}
-						onChange={(_, e) => formik.handleChange(e)}
-						// onChange={formik.handleChange}
-						onBlur={formik.handleBlur}
-					/>
-					<RegionDropdown
-						name="state"
-						country={formik.values.country}
-						value={formik.values.state}
-						onChange={(_, e) => formik.handleChange(e)}
-						onBlur={formik.handleBlur}
-					/>
 					<InputField
 						type="email"
 						placeholder="Email Address"
@@ -107,10 +89,10 @@ export const CheckoutDetails = () => {
 							/>
 						</div>
 						<div className="w-1/3">
-							<InputField
-								type="text"
-								placeholder="State / Province"
+							<RegionSelector
+								placeholder="State"
 								name="state"
+								country={formik.values.country}
 								value={formik.values.state}
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
@@ -129,14 +111,6 @@ export const CheckoutDetails = () => {
 					</div>
 					<div className=" mt-[-4px]">
 						<CountrySelector
-							placeholder="Country"
-							name="country"
-							value={formik.values.country}
-							onChange={formik.handleChange}
-							onBlur={formik.handleBlur}
-						/>
-						<InputField
-							type="text"
 							placeholder="Country"
 							name="country"
 							value={formik.values.country}

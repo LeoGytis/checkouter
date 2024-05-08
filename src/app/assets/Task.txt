@@ -1,0 +1,8 @@
+
+● Sukoduoti “pixel-perfect” checkout dizainą pagal Figma
+
+
+● Visi įvedimo laukeliai turi būti padaryti su validacija. Validacijai panaudoti pasirinktą
+biblioteką. HTML native validacija nesiskaitys, kaip implementuota validacija.
+
+● Kortelės duomenų įvedimo laukeliai turi būti tinkamai suformatuoti įvedant reikšmes

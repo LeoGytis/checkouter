@@ -23,7 +23,7 @@ export const CheckoutDetails = () => {
 			securityCode: "",
 			nameOnCard: "",
 		},
-		validationSchema: validationSchema,
+		// validationSchema: validationSchema,
 		// onSubmit: (values) => {
 		// 	console.log("Reikšmės::", values);
 		// },
@@ -44,7 +44,7 @@ export const CheckoutDetails = () => {
 			>
 				<div className="flex flex-col gap-4">
 					<h1 className="text-2xl font-bold">Contact</h1>
-					{/* <CountryDropdown
+					<CountryDropdown
 						name="country"
 						value={formik.values.country}
 						onChange={(_, e) => formik.handleChange(e)}
@@ -57,7 +57,7 @@ export const CheckoutDetails = () => {
 						value={formik.values.state}
 						onChange={(_, e) => formik.handleChange(e)}
 						onBlur={formik.handleBlur}
-					/> */}
+					/>
 					<InputField
 						type="email"
 						placeholder="Email Address"
@@ -106,7 +106,7 @@ export const CheckoutDetails = () => {
 								onBlur={formik.handleBlur}
 							/>
 						</div>
-						{/* <div className="w-1/3">
+						<div className="w-1/3">
 							<InputField
 								type="text"
 								placeholder="State / Province"
@@ -125,24 +125,24 @@ export const CheckoutDetails = () => {
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 							/>
-						</div> */}
+						</div>
 					</div>
 					<div className=" mt-[-4px]">
-						{/* <CountrySelector
+						<CountrySelector
 							placeholder="Country"
 							name="country"
 							value={formik.values.country}
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
-						/> */}
-						{/* <InputField
+						/>
+						<InputField
 							type="text"
 							placeholder="Country"
 							name="country"
 							value={formik.values.country}
 							onChange={formik.handleChange}
 							onBlur={formik.handleBlur}
-						/> */}
+						/>
 					</div>
 				</div>
 				<div className="flex flex-col gap-4">
@@ -151,7 +151,7 @@ export const CheckoutDetails = () => {
 						<p className="text-sm text-gray_light">All transactions are secure and encrypted.</p>
 					</div>
 					<div className="flex flex-col">
-						{/* <div className="flex justify-between bg-[#f0f5ff] p-4 border border-[#3362AB] rounded-t-md">
+						<div className="flex justify-between bg-[#f0f5ff] p-4 border border-[#3362AB] rounded-t-md">
 							<div className="flex gap-4 items-center">
 								<input type="radio" id="option1" name="options" value="option1" className="w-5 h-5" />
 								<label>Credit Card</label>
@@ -169,9 +169,9 @@ export const CheckoutDetails = () => {
 									+4
 								</div>
 							</div>
-						</div> */}
+						</div>
 						<div className="flex flex-col gap-3 bg-gray_background border border-gray_border border-t-0 rounded-b p-3 mb-4">
-							{/* <InputField
+							<InputField
 								type="text"
 								placeholder="Card number"
 								name="cardNumber"
@@ -204,7 +204,7 @@ export const CheckoutDetails = () => {
 								value={formik.values.nameOnCard}
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
-							/> */}
+							/>
 						</div>
 						<button
 							type="submit"

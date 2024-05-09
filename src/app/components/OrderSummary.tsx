@@ -3,7 +3,7 @@ import {ChooseUsContainer} from "./ChooseUsContainer";
 
 export const OrderSummary = () => {
 	return (
-		<div className=" flex flex-col gap-4">
+		<div className="flex flex-col gap-4">
 			<div className="flex justify-between items-center">
 				<div className="flex items-center">
 					<div className="relative flex items-center">

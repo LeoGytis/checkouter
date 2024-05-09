@@ -25,7 +25,6 @@ export const CheckoutDetails = () => {
 		},
 		validationSchema: validationSchema,
 		onSubmit: (values) => {
-			console.log("formValues --->", values);
 			storeToLocalStorage(values);
 		},
 	});
@@ -37,7 +36,7 @@ export const CheckoutDetails = () => {
 
 	return (
 		<FormikProvider value={formik}>
-			<Form className="flex flex-col gap-8">
+			<Form className="w-[559px] flex flex-col gap-8">
 				<div className="flex flex-col gap-4">
 					<h1 className="text-2xl font-bold">Contact</h1>
 					<InputField

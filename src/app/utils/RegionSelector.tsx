@@ -12,8 +12,8 @@ const RegionSelector = ({placeholder, name, country, ...rest}: RegionSelectorPro
 	return (
 		<>
 			<div className="relative w-full flex flex-col border border-[#E0E0E0] rounded-md px-2 pt-6 pb-2 h-[58px]">
-				<div className="absolute top-0 text-[#828282]">{placeholder}</div>
-				<Field name={name} placeholder="" className="">
+				<div className="absolute top-0 left-[10px] text-[#828282]">{placeholder}</div>
+				<Field name={name} placeholder="">
 					{({field, form}: FieldProps<any>) => (
 						<RegionDropdown
 							{...field}

@@ -11,8 +11,8 @@ const CountrySelector = ({placeholder, name, ...rest}: CountrySelectorProps) => 
 	return (
 		<>
 			<div className="relative w-full flex flex-col border border-[#E0E0E0] rounded-md px-2 pt-6 pb-2 h-[58px]">
-				<div className="absolute top-0 text-[#828282]">{placeholder}</div>
-				<Field name={name} className=" text-2xl bg-red-500 border border-red-500 valio">
+				<div className="absolute top-0 left-[10px] text-[#828282]">{placeholder}</div>
+				<Field name={name}>
 					{({field, form}: FieldProps<any>) => (
 						<CountryDropdown
 							{...field}

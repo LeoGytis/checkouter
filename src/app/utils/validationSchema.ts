@@ -10,7 +10,7 @@ const cardNumberSchema = Yup.object().shape({
 const expirationDateSchema = Yup.object().shape({
 	expirationDate: Yup.string()
 		.required("Expiration date is required")
-		.test("test-credit-card-expiration-date", "Invalid Expiration- date has past", (expirationDate) => {
+		.test("test-credit-card-expiration-date", "Invalid Expiration - date has past", (expirationDate) => {
 			if (!expirationDate) {
 				return false;
 			}
@@ -33,11 +33,23 @@ const expirationDateSchema = Yup.object().shape({
 			if (!expirationDate) {
 				return false;
 			}
-			const today = new Date().getFullYear().toString().substr(-2);
 
 			const [expMonth] = expirationDate.split("/");
 
 			if (Number(expMonth) > 12) {
+				return false;
+			}
+
+			return true;
+		})
+		.test("test-credit-card-expiration-year", "Invalid Expiration Year", (expirationDate) => {
+			if (!expirationDate) {
+				return false;
+			}
+
+			const [expMonth, expYear] = expirationDate.split("/");
+
+			if (expYear.length > 2) {
 				return false;
 			}
 

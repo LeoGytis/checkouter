@@ -149,7 +149,10 @@ export const CheckoutDetails = () => {
 								type="text"
 								placeholder="Card number"
 								name="cardNumber"
-								value={formik.values.cardNumber}
+								value={formik.values.cardNumber
+									.replace(/\s/g, "")
+									.replace(/(\d{4})/g, "$1 ")
+									.trim()}
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 							/>
@@ -158,7 +161,10 @@ export const CheckoutDetails = () => {
 									type="text"
 									placeholder="Expiration (MM/YY)"
 									name="expirationDate"
-									value={formik.values.expirationDate}
+									value={formik.values.expirationDate
+										.replace(/\s/g, "")
+										.replace(/^(\d{2})$/, "$1/")
+										.trim()}
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 								/>

@@ -89,7 +89,7 @@ export const CheckoutDetails = () => {
 						</div>
 						<div className="w-1/3">
 							<RegionSelector
-								placeholder="State"
+								placeholder="State / Province"
 								name="state"
 								country={formik.values.country}
 								value={formik.values.state}

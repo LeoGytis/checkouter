@@ -4,26 +4,29 @@ import {ErrorMessage, Field, FieldProps} from "formik";
 
 interface RegionSelectorProps extends RegionDropdownProps {
 	name: string;
-	country: string; // The selected country
+	country: string | "labas";
 	placeholder: string;
 }
 
 const RegionSelector = ({placeholder, name, country, ...rest}: RegionSelectorProps) => {
 	return (
-		<div className="w-full flex flex-col gap-1">
-			<Field name={name} className="checkout-input">
-				{({field, form}: FieldProps<any>) => (
-					<RegionDropdown
-						{...field}
-						{...rest}
-						country={country} // Pass the selected country to the RegionDropdown
-						onChange={(value) => form.setFieldValue(name, value)}
-						onBlur={() => form.setFieldTouched(name, true)}
-					/>
-				)}
-			</Field>
+		<>
+			<div className="relative w-full flex flex-col border border-[#E0E0E0] rounded-md px-2 pt-6 pb-2 h-[58px]">
+				<div className="absolute top-0 text-[#828282]">{placeholder}</div>
+				<Field name={name} placeholder="" className="">
+					{({field, form}: FieldProps<any>) => (
+						<RegionDropdown
+							{...field}
+							{...rest}
+							country={country}
+							onChange={(value) => form.setFieldValue(name, value)}
+							onBlur={() => form.setFieldTouched(name, true)}
+						/>
+					)}
+				</Field>
+			</div>
 			<ErrorMessage name={name} component="div" className="text-red-500" />
-		</div>
+		</>
 	);
 };
 

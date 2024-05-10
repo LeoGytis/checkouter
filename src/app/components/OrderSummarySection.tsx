@@ -2,11 +2,13 @@
 import Image from "next/image";
 import {ChooseUsSection} from "./ChooseUsSection";
 import {ScreenSize} from "../utils/ScreenSize";
+import {OrderToggler} from "../utils/OrderToggler";
 
 export const OrderSummarySection = () => {
 	const isMobile = ScreenSize();
 	return (
-		<section className="w-5/12 flex flex-col gap-4 py-[40px] pl-[38px] bg-gray_background">
+		<section className="w-full lg:w-5/12 flex flex-col gap-4 bg-gray_background p-4 lg:pr-0 lg:py-[40px] lg:pl-[38px]">
+			{isMobile && <OrderToggler />}
 			<div className="flex justify-between items-center">
 				<div className="flex items-center">
 					<div className="relative flex items-center">

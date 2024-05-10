@@ -211,8 +211,8 @@ export const CheckoutDetails = () => {
 						<p className="text-sm text-gray_light">All transactions are secure and encrypted</p>
 					</div>
 				</div>
+				{isMobile && <ChooseUsSection />}
 			</Form>
-			{isMobile && <ChooseUsSection />}
 		</FormikProvider>
 	);
 };

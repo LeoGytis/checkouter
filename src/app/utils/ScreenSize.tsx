@@ -1,15 +1,25 @@
 import {useState, useEffect} from "react";
 
 export const ScreenSize = () => {
-	const [isMobile, setIsMobile] = useState(window.innerWidth <= 1040);
+	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
-		function handleResize() {
-			setIsMobile(window.innerWidth <= 1040);
-		}
+		let windowInnerWidth = null;
 
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
+		// Check if window is available (client-side context)
+		if (typeof window !== "undefined") {
+			windowInnerWidth = window.innerWidth;
+			setIsMobile(windowInnerWidth <= 1040);
+
+			const handleResize = () => {
+				windowInnerWidth = window.innerWidth;
+				setIsMobile(windowInnerWidth <= 1040);
+			};
+
+			window.addEventListener("resize", handleResize);
+
+			return () => window.removeEventListener("resize", handleResize);
+		}
 	}, []);
 
 	return isMobile;

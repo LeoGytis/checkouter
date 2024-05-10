@@ -208,7 +208,7 @@ export const CheckoutDetails = () => {
 					</div>
 					<div className="flex justify-center gap-2">
 						<Image src="/images/lock.svg" alt="Credit-Visa" width={14} height={14} />
-						<p className="text-sm text-gray_light">All trasaactions are secure and ancrypted</p>
+						<p className="text-sm text-gray_light">All transactions are secure and encrypted</p>
 					</div>
 				</div>
 			</Form>

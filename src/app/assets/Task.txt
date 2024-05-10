@@ -1,3 +1,8 @@
 
 ● Sukoduoti “pixel-perfect” checkout dizainą pagal Figma
 
+● I have diveded Details and Order sections into 7/12 and 5/12 parts for better responsivness performance
+● NavBar component has overlay design patter in Figma which I did ignored
+● Logo and Cart icons are aligned with the main section container
+● 
+● 

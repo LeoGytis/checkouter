@@ -6,8 +6,8 @@ export default function Home() {
 	return (
 		<main>
 			<NavBar />
-			<div className="relative w-full flex justify-center">
-				<div className="max-w-screen-lg h-screen flex z-10">
+			<div className="relative w-full flex justify-center bg-gray_background lg:bg-white">
+				<div className="max-w-screen-lg w-full h-screen flex flex-col lg:flex-row z-10">
 					<CheckoutDetails />
 					<OrderSummarySection />
 				</div>

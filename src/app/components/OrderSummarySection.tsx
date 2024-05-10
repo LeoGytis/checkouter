@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import {ChooseUsSection} from "./ChooseUsSection";
+import {ScreenSize} from "../utils/ScreenSize";
 
 export const OrderSummarySection = () => {
+	const isMobile = ScreenSize();
 	return (
 		<section className="w-5/12 flex flex-col gap-4 py-[40px] pl-[38px] bg-gray_background">
 			<div className="flex justify-between items-center">
@@ -26,7 +29,7 @@ export const OrderSummarySection = () => {
 				<div>Total</div>
 				<div>$299.97</div>
 			</div>
-			<ChooseUsSection />
+			{!isMobile && <ChooseUsSection />}
 		</section>
 	);
 };

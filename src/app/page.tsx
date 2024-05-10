@@ -7,19 +7,17 @@ export default function Home() {
 		<main>
 			<NavBar />
 			<div className="w-full flex justify-center">
-				{/* <div className="max-w-screen-xl mx-auto flex flex-col xl:flex-row items-center xl:items-start text-gray_dark  bg-gray_background "> */}
-				<section className="w-7/12 pt-[40px] pr-[38px] pb-[24px] pl-[440px]">
+				<div className="w-7/12 flex justify-end bg-pink-400 pt-[40px] pr-[38px] pb-[24px]">
 					<CheckoutDetails />
-				</section>
-				<section className="w-5/12 bg-gray_background py-[40px] pr-[440px] pl-[38px]">
+				</div>
+				<div className="w-5/12 bg-yellow-400">
 					<OrderSummary />
-				</section>
-				{/* </div> */}
-				{/* <div className="px-[440px] flex justify-center text-gray_dark  bg-gray_background ">
-					<section className="w-full  border-r-2 border-red-700 bg-pink-200">
+				</div>
+				{/* <div className="max-w-screen-lg mx-auto flex flex-col xl:flex-row items-center xl:items-start text-gray_dark bg-emerald-200 ">
+					<section className="w-1/2">
 						<CheckoutDetails />
 					</section>
-					<section className="w-full bg-gray_background bg-lime-100">
+					<section className="w-1/2 flex bg-gray_background ">
 						<OrderSummary />
 					</section>
 				</div> */}

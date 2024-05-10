@@ -6,8 +6,11 @@ import {InputField} from "../utils/InputField";
 import {validationSchema} from "../utils/validationSchema";
 import CountrySelector from "../utils/CountrySelector";
 import RegionSelector from "../utils/RegionSelector";
+import {ChooseUsSection} from "./ChooseUsSection";
+import {ScreenSize} from "../utils/ScreenSize";
 
 export const CheckoutDetails = () => {
+	const isMobile = ScreenSize();
 	const formik = useFormik({
 		initialValues: {
 			email: "",
@@ -36,7 +39,7 @@ export const CheckoutDetails = () => {
 
 	return (
 		<FormikProvider value={formik}>
-			<Form className="w-full lg:w-7/12 flex flex-col gap-8 lg:pt-[40px] lg:pr-[38px] pb-[24px]">
+			<Form className="w-full lg:w-7/12 flex flex-col gap-4 lg:gap-8 border-b lg:border-0 border-neutral-200 lg:pt-[40px] lg:pr-[38px] pb-[24px]">
 				<div className="w-full flex flex-col gap-4 bg-white p-4 pt-6 lg:p-0">
 					<h1 className="text-2xl font-bold">Contact</h1>
 					<InputField
@@ -76,8 +79,8 @@ export const CheckoutDetails = () => {
 						onChange={formik.handleChange}
 						onBlur={formik.handleBlur}
 					/>
-					<div className="flex gap-3">
-						<div className="w-1/3">
+					<div className="flex flex-wrap gap-3">
+						<div className="w-full lg:w-1/3">
 							<InputField
 								type="text"
 								placeholder="City"
@@ -87,7 +90,7 @@ export const CheckoutDetails = () => {
 								onBlur={formik.handleBlur}
 							/>
 						</div>
-						<div className="w-1/3">
+						<div className="w-1/2 lg:w-1/3">
 							<RegionSelector
 								placeholder="State / Province"
 								name="state"
@@ -97,7 +100,7 @@ export const CheckoutDetails = () => {
 								onBlur={formik.handleBlur}
 							/>
 						</div>
-						<div className="w-1/3">
+						<div className="w-1/2 lg:w-1/3">
 							<InputField
 								type="text"
 								placeholder="ZIP / Postal Code"
@@ -199,6 +202,7 @@ export const CheckoutDetails = () => {
 					</div>
 				</div>
 			</Form>
+			{isMobile && <ChooseUsSection />}
 		</FormikProvider>
 	);
 };

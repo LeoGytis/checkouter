@@ -1,17 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 
-export const ChooseUsContainer = () => {
+export const ChooseUsSection = () => {
 	return (
-		<article className="w-full flex flex-col gap-4 pt-6">
+		<section className="w-full flex flex-col gap-4 pt-6">
 			<div className="flex justify-center">
 				<div className="w-full flex justify-center relative ">
 					<div className="absolute top-1/2 gray-line-separator"></div>
 					<div className="bg-gray_background  px-4 z-10">Why Choose LogoIpsum</div>
 				</div>
 			</div>
-
-			<div className="flex items-start">
+			<article className="flex items-start">
 				<Image src="/images/cashback.svg" alt="cashback_icon" width={32} height={32} className="mr-4" />
 				<div className="flex flex-col gap-2 text-sm">
 					<h4 className="font-bold">90-Day Money Back Guarantee</h4>
@@ -21,9 +20,8 @@ export const ChooseUsContainer = () => {
 						you.
 					</p>
 				</div>
-			</div>
-
-			<div className="flex items-start">
+			</article>
+			<article className="flex items-start">
 				<Image src="/images/rating.svg" alt="rating_icon" width={32} height={32} className="mr-4" />
 				<div className="flex flex-col gap-2 text-sm">
 					<h4 className="font-bold">Over 75,000+ Happy Customer</h4>
@@ -32,8 +30,8 @@ export const ChooseUsContainer = () => {
 						making our products, so you can enjoy seeing results when using it.
 					</p>
 				</div>
-			</div>
-			<div className="flex items-start">
+			</article>
+			<article className="flex items-start">
 				<Image src="/images/customer.svg" alt="customer_icon" width={32} height={32} className="mr-4" />
 				<div className="flex flex-col gap-2 text-sm">
 					<h4 className="font-bold">Professional Customer Support</h4>
@@ -41,7 +39,7 @@ export const ChooseUsContainer = () => {
 						Our customer service works 24/7 for your satisfaction. Feel free to reach out to us anytime.
 					</p>
 				</div>
-			</div>
-		</article>
+			</article>
+		</section>
 	);
 };

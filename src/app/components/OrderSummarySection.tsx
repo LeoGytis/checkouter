@@ -1,9 +1,9 @@
 import Image from "next/image";
-import {ChooseUsContainer} from "./ChooseUsContainer";
+import {ChooseUsSection} from "./ChooseUsSection";
 
-export const OrderSummary = () => {
+export const OrderSummarySection = () => {
 	return (
-		<div className="w-5/12 flex flex-col gap-4 py-[40px] pl-[38px] bg-gray_background">
+		<section className="w-5/12 flex flex-col gap-4 py-[40px] pl-[38px] bg-gray_background">
 			<div className="flex justify-between items-center">
 				<div className="flex items-center">
 					<div className="relative flex items-center">
@@ -26,7 +26,7 @@ export const OrderSummary = () => {
 				<div>Total</div>
 				<div>$299.97</div>
 			</div>
-			<ChooseUsContainer />
-		</div>
+			<ChooseUsSection />
+		</section>
 	);
 };

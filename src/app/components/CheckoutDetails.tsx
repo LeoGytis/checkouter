@@ -54,22 +54,26 @@ export const CheckoutDetails = () => {
 				<div className="flex flex-col gap-4 bg-white p-4 lg:p-0">
 					<h1 className="text-2xl font-bold">Delivery</h1>
 					<div className="flex gap-4">
-						<InputField
-							type="text"
-							placeholder="First Name"
-							name="firstName"
-							value={formik.values.firstName}
-							onChange={formik.handleChange}
-							onBlur={formik.handleBlur}
-						/>
-						<InputField
-							type="text"
-							placeholder="Last Name"
-							name="lastName"
-							value={formik.values.lastName}
-							onChange={formik.handleChange}
-							onBlur={formik.handleBlur}
-						/>
+						<div className="w-1/2">
+							<InputField
+								type="text"
+								placeholder="First Name"
+								name="firstName"
+								value={formik.values.firstName}
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+							/>
+						</div>
+						<div className="w-1/2">
+							<InputField
+								type="text"
+								placeholder="Last Name"
+								name="lastName"
+								value={formik.values.lastName}
+								onChange={formik.handleChange}
+								onBlur={formik.handleBlur}
+							/>
+						</div>
 					</div>
 					<InputField
 						type="text"
@@ -79,7 +83,7 @@ export const CheckoutDetails = () => {
 						onChange={formik.handleChange}
 						onBlur={formik.handleBlur}
 					/>
-					<div className="flex flex-wrap gap-3">
+					<div className="flex flex-wrap lg:flex-nowrap gap-3">
 						<div className="w-full lg:w-1/3">
 							<InputField
 								type="text"
@@ -90,25 +94,27 @@ export const CheckoutDetails = () => {
 								onBlur={formik.handleBlur}
 							/>
 						</div>
-						<div className="w-1/2 lg:w-1/3">
-							<RegionSelector
-								placeholder="State / Province"
-								name="state"
-								country={formik.values.country}
-								value={formik.values.state}
-								onChange={formik.handleChange}
-								onBlur={formik.handleBlur}
-							/>
-						</div>
-						<div className="w-1/2 lg:w-1/3">
-							<InputField
-								type="text"
-								placeholder="ZIP / Postal Code"
-								name="zipCode"
-								value={formik.values.zipCode}
-								onChange={formik.handleChange}
-								onBlur={formik.handleBlur}
-							/>
+						<div className="w-full lg:w-2/3 flex  gap-3 ">
+							<div className="w-1/2">
+								<RegionSelector
+									placeholder="State / Province"
+									name="state"
+									country={formik.values.country}
+									value={formik.values.state}
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
+							</div>
+							<div className="w-1/2">
+								<InputField
+									type="text"
+									placeholder="ZIP / Postal Code"
+									name="zipCode"
+									value={formik.values.zipCode}
+									onChange={formik.handleChange}
+									onBlur={formik.handleBlur}
+								/>
+							</div>
 						</div>
 					</div>
 					<div className=" mt-[-4px]">
@@ -159,25 +165,29 @@ export const CheckoutDetails = () => {
 								onBlur={formik.handleBlur}
 							/>
 							<div className="flex gap-4">
-								<InputField
-									type="text"
-									placeholder="Expiration (MM/YY)"
-									name="expirationDate"
-									value={formik.values.expirationDate
-										.replace(/\s/g, "")
-										.replace(/^(\d{2})$/, "$1/")
-										.trim()}
-									onChange={formik.handleChange}
-									onBlur={formik.handleBlur}
-								/>
-								<InputField
-									type="text"
-									placeholder="Security code"
-									name="securityCode"
-									value={formik.values.securityCode}
-									onChange={formik.handleChange}
-									onBlur={formik.handleBlur}
-								/>
+								<div className="w-1/2">
+									<InputField
+										type="text"
+										placeholder="Expiration (MM/YY)"
+										name="expirationDate"
+										value={formik.values.expirationDate
+											.replace(/\s/g, "")
+											.replace(/^(\d{2})$/, "$1/")
+											.trim()}
+										onChange={formik.handleChange}
+										onBlur={formik.handleBlur}
+									/>
+								</div>
+								<div className="w-1/2">
+									<InputField
+										type="text"
+										placeholder="Security code"
+										name="securityCode"
+										value={formik.values.securityCode}
+										onChange={formik.handleChange}
+										onBlur={formik.handleBlur}
+									/>
+								</div>
 							</div>
 							<InputField
 								type="text"

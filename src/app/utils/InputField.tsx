@@ -12,9 +12,9 @@ interface InputFieldProps {
 export const InputField = ({type, placeholder, name, value, onChange, onBlur}: InputFieldProps) => (
 	<div className="w-full flex flex-col gap-1">
 		<Field
+			className="checkout-input"
 			type={type}
 			placeholder={placeholder}
-			className="checkout-input"
 			name={name}
 			value={value}
 			onChange={onChange}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const ChooseUsSection = () => {
 	return (
-		<section className="w-full flex flex-col gap-4 pt-6 bg-gray_background">
+		<section className="w-full flex flex-col gap-4 bg-gray_background px-4 lg:p-0 pt-6 lg:pt-6">
 			<div className="flex justify-center">
 				<div className="w-full flex justify-center relative ">
 					<div className="absolute top-1/2 gray-line-separator"></div>

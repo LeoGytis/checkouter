@@ -40,7 +40,7 @@ export const CheckoutDetails = () => {
 	return (
 		<FormikProvider value={formik}>
 			<Form className="w-full lg:w-7/12 flex flex-col gap-4 lg:gap-8 border-b lg:border-0 border-neutral-200 lg:pt-[40px] lg:pr-[38px] pb-[24px]">
-				<div className="w-full flex flex-col gap-4 bg-white p-4 pt-6 lg:p-0">
+				<div className="flex flex-col gap-4 bg-white p-4 pt-6 lg:p-0">
 					<h1 className="text-2xl font-bold">Contact</h1>
 					<InputField
 						type="email"
@@ -53,8 +53,8 @@ export const CheckoutDetails = () => {
 				</div>
 				<div className="flex flex-col gap-4 bg-white p-4 lg:p-0">
 					<h1 className="text-2xl font-bold">Delivery</h1>
-					<div className="flex gap-4">
-						<div className="w-1/2">
+					<div className="flex">
+						<div className="w-1/2 pr-3">
 							<InputField
 								type="text"
 								placeholder="First Name"
@@ -94,7 +94,7 @@ export const CheckoutDetails = () => {
 								onBlur={formik.handleBlur}
 							/>
 						</div>
-						<div className="w-full lg:w-2/3 flex  gap-3 ">
+						<div className="w-full lg:w-2/3 flex gap-3 ">
 							<div className="w-1/2">
 								<RegionSelector
 									placeholder="State / Province"
@@ -164,8 +164,8 @@ export const CheckoutDetails = () => {
 								onChange={formik.handleChange}
 								onBlur={formik.handleBlur}
 							/>
-							<div className="flex gap-4">
-								<div className="w-1/2">
+							<div className="flex">
+								<div className="w-1/2 pr-3">
 									<InputField
 										type="text"
 										placeholder="Expiration (MM/YY)"

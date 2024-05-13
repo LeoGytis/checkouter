@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const ChooseUsSection = () => {
 	return (
-		<section className="w-full flex flex-col gap-4 bg-gray_background px-4 lg:p-0 pt-6 lg:pt-6">
+		<section className="w-full flex flex-col gap-4 bg-gray_background px-4 lg:p-0 pt-6 lg:pt-6 pb-11">
 			<div className="flex justify-center">
 				<div className="w-full flex justify-center relative ">
 					<div className="absolute top-1/2 gray-line-separator"></div>
@@ -31,7 +31,7 @@ export const ChooseUsSection = () => {
 					</p>
 				</div>
 			</article>
-			<article className="flex items-start">
+			<article className="flex items-start pb-8">
 				<Image src="/images/customer.svg" alt="customer_icon" width={32} height={32} className="mr-4" />
 				<div className="flex flex-col gap-2 text-sm">
 					<h4 className="font-bold">Professional Customer Support</h4>

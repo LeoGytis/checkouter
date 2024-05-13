@@ -39,7 +39,7 @@ export const CheckoutDetails = () => {
 
 	return (
 		<FormikProvider value={formik}>
-			<Form className="w-full lg:w-7/12 flex flex-col gap-4 lg:gap-8 border-b lg:border-0 border-neutral-200 lg:pt-[40px] lg:pr-[38px] pb-[24px]">
+			<Form className="w-full lg:w-7/12 flex flex-col gap-4 lg:gap-8 border-b lg:border-0 border-neutral-200 lg:pt-[40px] lg:pr-[38px]">
 				<div className="flex flex-col gap-4 bg-white p-4 pt-6 lg:p-0">
 					<h1 className="text-2xl font-bold">Contact</h1>
 					<InputField
@@ -206,7 +206,7 @@ export const CheckoutDetails = () => {
 							COMPLETE ORDER
 						</button>
 					</div>
-					<div className="flex justify-center gap-2">
+					<div className="flex justify-center gap-2 pb-4 lg:p-6">
 						<Image src="/images/lock.svg" alt="Credit-Visa" width={14} height={14} />
 						<p className="text-sm text-gray_light">All transactions are secure and encrypted</p>
 					</div>

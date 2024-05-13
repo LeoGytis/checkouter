@@ -1,8 +1,7 @@
 
-● Sukoduoti “pixel-perfect” checkout dizainą pagal Figma
-
 ● I have diveded Details and Order sections into 7/12 and 5/12 parts for better responsivness performance
-● NavBar component has overlay design patter in Figma which I did ignored
+● NavBar component has overlay design pattern in Figma which I did ignored
 ● Logo and Cart icons are aligned with the main section container
-● When toggling order overview in mobile view. Does the padding in the bottom changes from 44px to 96px?
+● When toggling order overview in mobile view. Does the padding at the bottom changes from 44px to 96px?
 ● Gap between City, State/Province, Postal Code and Country differs from gaps with other input fields
+● Changing color of select dropdown field arrow would require additional svg to implement

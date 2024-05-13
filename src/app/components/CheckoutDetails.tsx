@@ -39,8 +39,8 @@ export const CheckoutDetails = () => {
 
 	return (
 		<FormikProvider value={formik}>
-			<Form className="w-full lg:w-7/12 flex flex-col gap-4 lg:gap-8 border-b lg:border-0 border-neutral-200 lg:pt-[40px] lg:pr-[38px]">
-				<div className="flex flex-col gap-4 bg-white p-4 pt-6 lg:p-0">
+			<Form className="w-full lg:w-7/12 flex flex-col gap-4 lg:gap-8 border-b lg:border-0 border-neutral-200  lg:pr-[38px]">
+				<div className="flex flex-col gap-4 bg-white p-4 pt-6 lg:p-0 lg:pt-[14px]">
 					<h1 className="text-2xl font-bold">Contact</h1>
 					<InputField
 						type="email"

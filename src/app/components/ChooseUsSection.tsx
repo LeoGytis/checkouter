@@ -1,5 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
+import cashbackIcon from "../../../public/images/cashback.svg";
+import ratingIcon from "../../../public/images/rating.svg";
+import customerIcon from "../../../public/images/customer.svg";
 
 export const ChooseUsSection = () => {
 	return (
@@ -11,7 +14,8 @@ export const ChooseUsSection = () => {
 				</div>
 			</div>
 			<article className="flex items-start">
-				<Image src="/images/cashback.svg" alt="cashback_icon" width={32} height={32} className="mr-4" />
+				<Image src={cashbackIcon} alt="Cashback Icon" width={32} height={32} className="mr-4" />
+
 				<div className="flex flex-col gap-2 text-sm">
 					<h4 className="font-bold">90-Day Money Back Guarantee</h4>
 					<p className="text-gray_medium">
@@ -22,7 +26,8 @@ export const ChooseUsSection = () => {
 				</div>
 			</article>
 			<article className="flex items-start">
-				<Image src="/images/rating.svg" alt="rating_icon" width={32} height={32} className="mr-4" />
+				<Image src={ratingIcon} alt="Rating Icon" width={32} height={32} className="mr-4" />
+
 				<div className="flex flex-col gap-2 text-sm">
 					<h4 className="font-bold">Over 75,000+ Happy Customer</h4>
 					<p className="text-gray_medium">
@@ -32,7 +37,7 @@ export const ChooseUsSection = () => {
 				</div>
 			</article>
 			<article className="flex items-start pb-8">
-				<Image src="/images/customer.svg" alt="customer_icon" width={32} height={32} className="mr-4" />
+				<Image src={customerIcon} alt="Customer Icon" width={32} height={32} className="mr-4" />
 				<div className="flex flex-col gap-2 text-sm">
 					<h4 className="font-bold">Professional Customer Support</h4>
 					<p className="text-gray_medium">

@@ -4,6 +4,7 @@ import {ChooseUsSection} from "./ChooseUsSection";
 import {ScreenSize} from "../utils/ScreenSize";
 import {IoIosArrowDown, IoIosArrowUp} from "react-icons/io";
 import {useEffect, useState} from "react";
+import productImage from "../../../public/images/product.png";
 
 export const OrderSummarySection = () => {
 	const isMobile = ScreenSize();
@@ -42,7 +43,7 @@ export const OrderSummarySection = () => {
 							<div className="absolute top-0 left-full transform -translate-y-1/2 -translate-x-1/2 font-sm text-white rounded-full bg-gray_medium px-[7px]">
 								3
 							</div>
-							<Image src="/images/product.png" alt="Product" width={64} height={64} />
+							<Image src={productImage} alt="Product" width={64} height={64} />
 						</div>
 						<h3 className="text-sm font-bold px-4">LogoImpsum PIL</h3>
 					</div>

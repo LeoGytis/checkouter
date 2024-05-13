@@ -8,6 +8,11 @@ import CountrySelector from "../utils/CountrySelector";
 import RegionSelector from "../utils/RegionSelector";
 import {ChooseUsSection} from "./ChooseUsSection";
 import {ScreenSize} from "../utils/ScreenSize";
+import visaImage from "../../../public/images/visa.svg";
+import mastercardImage from "../../../public/images/mastercard.png";
+import amexImage from "../../../public/images/amex.svg";
+import groupImage from "../../../public/images/group.svg";
+import lockImage from "../../../public/images/lock.svg";
 
 export const CheckoutDetails = () => {
 	const isMobile = ScreenSize();
@@ -140,12 +145,12 @@ export const CheckoutDetails = () => {
 							</div>
 							<div className="flex gap-[3px]">
 								<div className="w-8 h-6 flex justify-center items-center rounded bg-white  border-[0.5px] border-gray_border p-[2px]">
-									<Image src="/images/visa.svg" alt="Credit-Visa" width={36} height={24} />
+									<Image src={visaImage} alt="Credit-Visa" width={36} height={24} />
 								</div>
-								<Image src="/images/mastercard.png" alt="Credit-Visa" width={36} height={24} priority />
-								<Image src="/images/amex.svg" alt="Credit-Visa" width={36} height={24} priority />
-								<div className="w-8 h-6 flex justify-center items-center rounded bg-white  border-[0.5px] border-gray_border p-[4px]">
-									<Image src="/images/group.svg" alt="Credit-Visa" width={36} height={24} />
+								<Image src={mastercardImage} alt="Credit-Mastercard" width={36} height={24} priority />
+								<Image src={amexImage} alt="Credit-Amex" width={36} height={24} priority />
+								<div className="w-8 h-6 flex justify-center items-center rounded bg-white border-[0.5px] border-gray_border p-[4px]">
+									<Image src={groupImage} alt="Credit-Group" width={36} height={24} />
 								</div>
 								<div className="w-8 h-6 flex justify-center items-center text-sm font-medium rounded bg-white border-[0.5px] border-gray_border p-[2px] py-[10px]">
 									+4
@@ -207,7 +212,7 @@ export const CheckoutDetails = () => {
 						</button>
 					</div>
 					<div className="flex justify-center gap-2 pb-4 lg:p-6">
-						<Image src="/images/lock.svg" alt="Credit-Visa" width={14} height={14} />
+						<Image src={lockImage} alt="Credit-Visa" width={14} height={14} />
 						<p className="text-sm text-gray_light">All transactions are secure and encrypted</p>
 					</div>
 				</div>

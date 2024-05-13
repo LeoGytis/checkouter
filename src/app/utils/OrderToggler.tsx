@@ -1,9 +1,15 @@
+import {IoIosArrowUp, IoIosArrowDown} from "react-icons/io";
+
 export const OrderToggler = () => {
 	return (
-		<nav className="w-full border-b border-gray_border">
-			<div className="max-w-screen-lg mx-auto h-[72px] flex justify-between items-center px-4 lg:p-0">
-				Order Toggler
+		<section className="w-full border-b border-gray_border">
+			<div className="flex justify-between items-center ">
+				<div className="">Order overview</div>
+				<div>
+					<IoIosArrowUp />
+					<IoIosArrowDown />
+				</div>
 			</div>
-		</nav>
+		</section>
 	);
 };

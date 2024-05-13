@@ -15,18 +15,19 @@ export const OrderSummarySection = () => {
 	const isMobile = ScreenSize();
 	return (
 		<section className="w-full lg:w-5/12 flex flex-col gap-4 bg-gray_background p-4 lg:pr-0 lg:py-[40px] lg:pl-[38px]">
-			<section className="w-full border-b border-gray_border">
-				<div className="flex justify-between items-center ">
-					<div className="flex gap-2 items-center">
-						Order overview
-						<div className="cursor-pointer" onClick={toggleOverview}>
-							{isOverviewOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+			{isMobile && (
+				<section className="w-full border-b border-gray_border">
+					<div className="flex justify-between items-center ">
+						<div className="flex gap-2 items-center">
+							Order overview
+							<div className="cursor-pointer" onClick={toggleOverview}>
+								{isOverviewOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+							</div>
 						</div>
+						<div>$299.97</div>
 					</div>
-
-					<div>$299.97</div>
-				</div>
-			</section>
+				</section>
+			)}
 			{isOverviewOpen ? (
 				<section className="flex flex-col gap-4">
 					<div className="flex justify-between items-center">
